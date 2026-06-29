@@ -20,7 +20,8 @@ export default function Result() {
     </div>
   )
 
-  const lineUrl = LINE_URLS[ver] || LINE_URLS[1]
+  const baseLineUrl = LINE_URLS[ver] || LINE_URLS[1]
+  const lineUrl = `${baseLineUrl}?type=${type}`
   const shareText = `私のエロMBTIタイプは「${d.name}」(${type}) でした\nあなたも診断してみて👇`
 
   const copy = () => {
