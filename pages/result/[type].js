@@ -115,6 +115,17 @@ export default function Result() {
             <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.1 6.6 5.23 8.34L6 22l3.13-1.57C10.03 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
             LINE で全文を受け取る（無料）
           </a>
+          <div style={{marginTop:'1.25rem',background:'#242424',border:'1px solid #333',borderRadius:10,padding:'1rem'}}>
+            <div style={{fontSize:11,color:'#555',letterSpacing:'0.1em',textTransform:'uppercase',marginBottom:'0.5rem'}}>登録後にやること</div>
+            <div style={{fontSize:13,color:'#888',lineHeight:1.8}}>LINEに追加したら、そのまま</div>
+            <div style={{margin:'0.6rem 0',background:'#1a1a1a',border:'1px solid #5a2535',borderRadius:8,padding:'10px'}}>
+              <span style={{fontSize:22,fontWeight:700,color:'#e06080',letterSpacing:'0.1em'}}>{type}</span>
+            </div>
+            <div style={{fontSize:13,color:'#888',lineHeight:1.8}}>
+              と送信してください<br/>
+              <span style={{fontSize:11,color:'#555'}}>あなたの詳細プロファイルが自動で届きます</span>
+            </div>
+          </div>
         </div>
 
         {/* シェア・リトライ */}
