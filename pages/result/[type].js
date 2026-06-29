@@ -126,17 +126,20 @@ export default function Result() {
       <div style={{...base,minHeight:'100vh',maxWidth:600,margin:'0 auto'}}>
 
         {/* ヘッダービジュアル */}
-        <div style={{position:'relative',padding:'3rem 1.5rem 2rem',textAlign:'center',background:'linear-gradient(180deg,#2a1520 0%,#222 100%)',overflow:'hidden'}}>
-          <div style={{position:'absolute',inset:0,background:'radial-gradient(circle at 50% 60%,rgba(224,96,128,.18) 0%,transparent 70%)',pointerEvents:'none'}}/>
-          <div style={{fontSize:10,letterSpacing:'0.3em',color:'#c06080',textTransform:'uppercase',marginBottom:'1.5rem',position:'relative'}}>エロMBTI診断 — 結果</div>
-          <div style={{width:110,height:110,borderRadius:'50%',background:'rgba(224,96,128,.1)',border:'1px solid rgba(224,96,128,.2)',display:'flex',alignItems:'center',justifyContent:'center',margin:'0 auto 1rem',position:'relative',fontSize:60}}>
-            {d.emoji}
-          </div>
-          <div style={{display:'inline-block',fontSize:11,color:'#e06080',border:'1px solid #5a2535',padding:'2px 12px',borderRadius:4,letterSpacing:'0.14em',marginBottom:'0.75rem',position:'relative'}}>{type}</div>
-          <div style={{fontSize:22,fontWeight:500,color:'#f0f0f0',letterSpacing:'-0.02em',lineHeight:1.3,marginBottom:'0.35rem',position:'relative'}}>{d.name}</div>
-          <div style={{fontSize:13,color:'#888',fontWeight:300,marginBottom:'1rem',position:'relative'}}>{d.catch}</div>
-          <span style={{fontSize:11,color:'#e06080',background:'rgba(224,96,128,.1)',border:'1px solid rgba(224,96,128,.25)',display:'inline-block',padding:'4px 14px',borderRadius:20,position:'relative'}}>{d.rare}</span>
-          <div style={{display:'flex',flexWrap:'wrap',gap:6,marginTop:'1rem',justifyContent:'center',position:'relative'}}>
+        <div style={{position:'relative',textAlign:'center',background:'#1a1a1a',overflow:'hidden'}}>
+          <img
+            src={`/images/${type}.png`}
+            alt={`${type} - ${d.name}`}
+            style={{width:'100%',display:'block'}}
+          />
+        </div>
+        <div style={{padding:'1.5rem 1.5rem 0',textAlign:'center'}}>
+          <div style={{fontSize:10,letterSpacing:'0.3em',color:'#c06080',textTransform:'uppercase',marginBottom:'1rem'}}>エロMBTI診断 — 結果</div>
+          <div style={{display:'inline-block',fontSize:11,color:'#e06080',border:'1px solid #5a2535',padding:'2px 12px',borderRadius:4,letterSpacing:'0.14em',marginBottom:'0.75rem'}}>{type}</div>
+          <div style={{fontSize:22,fontWeight:500,color:'#f0f0f0',letterSpacing:'-0.02em',lineHeight:1.3,marginBottom:'0.35rem'}}>{d.name}</div>
+          <div style={{fontSize:13,color:'#888',fontWeight:300,marginBottom:'1rem'}}>{d.catch}</div>
+          <span style={{fontSize:11,color:'#e06080',background:'rgba(224,96,128,.1)',border:'1px solid rgba(224,96,128,.25)',display:'inline-block',padding:'4px 14px',borderRadius:20}}>{d.rare}</span>
+          <div style={{display:'flex',flexWrap:'wrap',gap:6,marginTop:'1rem',justifyContent:'center'}}>
             {d.traits.map(t=>(
               <span key={t} style={{fontSize:11,padding:'4px 12px',borderRadius:20,border:'1px solid #3a3a3a',color:'#888',background:'#2a2a2a'}}>{t}</span>
             ))}
