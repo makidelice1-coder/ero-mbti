@@ -216,6 +216,23 @@ export default function Result() {
             </div>
           </div>
 
+          {/* Xシェアボタン（LINE CTAの直下・目立つ配置）*/}
+          <button onClick={()=>{
+            const text = `私のエロMBTIタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app`
+            window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`,'_blank')
+          }} style={{
+            display:'flex',alignItems:'center',justifyContent:'center',gap:10,
+            width:'100%',marginTop:'0.5rem',marginBottom:'1.5rem',padding:'14px',
+            background:'#000',color:'#fff',border:'1px solid #333',
+            borderRadius:10,fontSize:14,fontWeight:500,
+            letterSpacing:'0.04em',cursor:'pointer'
+          }}>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="white">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+            この結果をXでシェアする
+          </button>
+
           {/* 同じタイプの有名人 */}
           {famous.length > 0 && (
             <div style={{marginBottom:'1.5rem'}}>
@@ -237,12 +254,6 @@ export default function Result() {
           <div style={{display:'flex',gap:8,marginBottom:10}}>
             <button onClick={copy} style={{flex:1,padding:12,border:'1px solid #383838',background:'#2a2a2a',color:copied?'#e06080':'#888',borderRadius:8,fontSize:13,cursor:'pointer'}}>
               {copied?'コピーしました':'結果をコピー'}
-            </button>
-            <button onClick={()=>{
-              const url=typeof window!=='undefined'?window.location.href:''
-              window.open(`https://x.com/intent/post?text=${encodeURIComponent(shareText+'\n'+url)}`,'_blank')
-            }} style={{flex:1,padding:12,border:'1px solid #383838',background:'#2a2a2a',color:'#888',borderRadius:8,fontSize:13,cursor:'pointer'}}>
-              X でシェア
             </button>
           </div>
           <button onClick={()=>router.push('/')} style={{display:'block',width:'100%',background:'none',border:'none',fontSize:12,color:'#444',cursor:'pointer',padding:8,textDecoration:'underline',textUnderlineOffset:3}}>
