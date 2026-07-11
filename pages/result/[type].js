@@ -159,7 +159,7 @@ export default function Result() {
               LINEで全文を受け取る
             </a>
             <button onClick={()=>{
-              const text = `私のエロMBTIタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app\n#エロMBTI`
+              const text = `エロMBTI診断やったら当たりすぎてこわいww\n私のタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app\n#エロMBTI`
               window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`,'_blank')
             }} style={{
               flex:1,display:'flex',alignItems:'center',justifyContent:'center',gap:8,
@@ -241,7 +241,7 @@ export default function Result() {
 
           {/* Xシェアボタン（LINE CTAの直下・目立つ配置）*/}
           <button onClick={()=>{
-            const text = `私のエロMBTIタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app\n#エロMBTI`
+            const text = `エロMBTI診断やったら当たりすぎてこわいww\n私のタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app\n#エロMBTI`
             window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`,'_blank')
           }} style={{
             display:'flex',alignItems:'center',justifyContent:'center',gap:10,
