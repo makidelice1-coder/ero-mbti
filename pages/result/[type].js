@@ -156,7 +156,7 @@ export default function Result() {
               padding:'13px',borderRadius:10,fontSize:13,fontWeight:500,
             }}>
               <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.1 6.6 5.23 8.34L6 22l3.13-1.57C10.03 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
-              LINE登録
+              LINEで全文を受け取る
             </a>
             <button onClick={()=>{
               const text = `私のエロMBTIタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app`
@@ -204,7 +204,7 @@ export default function Result() {
             </div>
             <div style={{position:'absolute',inset:0,display:'flex',flexDirection:'column',alignItems:'center',justifyContent:'center',zIndex:2}}>
               <div style={{fontSize:28,marginBottom:8}}>🔒</div>
-              <div style={{fontSize:13,color:'#f0f0f0',fontWeight:500,textAlign:'center',lineHeight:1.5}}>続きはLINE登録で解放</div>
+              <div style={{fontSize:13,color:'#f0f0f0',fontWeight:500,textAlign:'center',lineHeight:1.5}}>続きはLINEで全文を受け取るで解放</div>
               <div style={{fontSize:11,color:'#888',marginTop:4,textAlign:'center'}}>ステータス・プロファイル・相性診断が全部見られる</div>
             </div>
           </div>
@@ -212,7 +212,7 @@ export default function Result() {
           {/* LINE CTA */}
           <div style={{background:'#1a1a1a',border:'1px solid #2e2e2e',borderRadius:14,padding:'1.75rem 1.5rem',marginBottom:'1.5rem',textAlign:'center'}}>
             <div style={{fontSize:10,letterSpacing:'0.2em',color:'#555',textTransform:'uppercase',marginBottom:'.75rem'}}>無料 / 1秒で受け取れます</div>
-            <div style={{fontSize:18,fontWeight:500,color:'#f0f0f0',marginBottom:'.4rem',lineHeight:1.4}}>LINE登録で<br/>全コンテンツを解放</div>
+            <div style={{fontSize:18,fontWeight:500,color:'#f0f0f0',marginBottom:'.4rem',lineHeight:1.4}}>LINEで全文を受け取るで<br/>全コンテンツを解放</div>
             <div style={{fontSize:12,color:'#666',lineHeight:1.7,marginBottom:'1.25rem'}}>あなたの診断結果の全文＋全16タイプの取扱説明書が読み放題</div>
             <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:6,marginBottom:'1.25rem',textAlign:'left'}}>
               {['辛口プロファイル全文','相性◎と💀の詳細','行動パターン・地雷','全16タイプ読み放題'].map(p=>(
