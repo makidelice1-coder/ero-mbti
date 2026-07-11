@@ -148,6 +148,29 @@ export default function Result() {
 
         <div style={{padding:'2rem 1.5rem'}}>
 
+          {/* 上部CTA（ぼかしゾーンの上）*/}
+          <div style={{display:'flex',gap:8,marginBottom:'1.25rem'}}>
+            <a href={lineUrl} target="_blank" rel="noopener noreferrer" style={{
+              flex:1,display:'flex',alignItems:'center',justifyContent:'center',gap:8,
+              background:'#06C755',color:'#fff',textDecoration:'none',
+              padding:'13px',borderRadius:10,fontSize:13,fontWeight:500,
+            }}>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M12 2C6.48 2 2 6.02 2 11c0 3.53 2.1 6.6 5.23 8.34L6 22l3.13-1.57C10.03 20.77 11 21 12 21c5.52 0 10-4.02 10-9S17.52 2 12 2z"/></svg>
+              LINE登録
+            </a>
+            <button onClick={()=>{
+              const text = `私のエロMBTIタイプは「${d.name}」(${type}) でした🔥\nあなたも診断してみて👇\nhttps://ero-mbti.vercel.app`
+              window.open(`https://x.com/intent/post?text=${encodeURIComponent(text)}`,'_blank')
+            }} style={{
+              flex:1,display:'flex',alignItems:'center',justifyContent:'center',gap:8,
+              background:'#000',color:'#fff',border:'none',
+              padding:'13px',borderRadius:10,fontSize:13,fontWeight:500,cursor:'pointer'
+            }}>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              Xでシェア
+            </button>
+          </div>
+
           {/* ぼかしゾーン */}
           <div style={{position:'relative',marginBottom:'1.5rem'}}>
             <div style={{filter:'blur(6px)',userSelect:'none',pointerEvents:'none',opacity:0.5}}>
