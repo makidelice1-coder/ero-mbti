@@ -13,7 +13,7 @@ export default function Share() {
 
     const text = `流行りのエロMBTI診断が当たりすぎてこわいww\n\nーーーーーーー\n私のタイプは…\n《${d.name}》(${type}) \nでした🔥\n\nたったの1分で結果がわかるから\nあなたも診断してみて👇\n【https://ero-mbti.vercel.app】\nーーーーーーー\n#エロMBTI`
     const encoded = encodeURIComponent(text)
-    const appUrl = `x://post?text=${encoded}`
+    const appUrl = `twitter://post?message=${encoded}`
     const webUrl = `https://x.com/intent/post?text=${encoded}`
 
     const start = Date.now()
